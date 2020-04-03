@@ -3,20 +3,8 @@
 
 #include <cctype>
 #include <vector>
-#include <sstream>
 
 #include "Common.h"
-
-bool FoundFactors_VerifyDigit(const std::string& ToVerify)
-{
-    for( const char Elem : ToVerify )
-    {
-        if( !isdigit(Elem) ) {
-            return false;
-        }
-    }
-    return true;
-}
 
 std::vector<int> FoundFactors_Find(int ToFactor)
 {
@@ -37,15 +25,12 @@ int FoundFactors()
 
     Print("Please provide a number.");
     std::getline(std::cin,Input);
-    if( !FoundFactors_VerifyDigit(Input) ) {
+    if( !VerifyIsDigit(Input) ) {
         Print("Input provided was not a digit!");
         return EXIT_FAILURE;
     }
 
-    std::stringstream Converter;
-    Converter << Input;
-    Converter >> SourceNum;
-
+    SourceNum = ConvertToInt(Input);
     std::vector<int> FoundFactors = FoundFactors_Find(SourceNum);
 
     Print("The found factors for your provided number are: ");
