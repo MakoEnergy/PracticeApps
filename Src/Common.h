@@ -20,6 +20,9 @@ int ConvertToInt(const std::string& ToConvert)
 
 bool VerifyIsDigit(const std::string& ToVerify)
 {
+    if( ToVerify.empty() ) {
+        return false;
+    }
     for( const char Elem : ToVerify )
     {
         if( !isdigit(Elem) ) {
@@ -27,6 +30,23 @@ bool VerifyIsDigit(const std::string& ToVerify)
         }
     }
     return true;
+}
+
+std::string GetDigitSuffix(const std::string& ToSuffix)
+{
+    std::string Ret;
+    if( !ToSuffix.empty() ) {
+        if( ToSuffix.back() == '1' ) {
+            Ret.append("st");
+        }else if( ToSuffix.back() == '2' ) {
+            Ret.append("nd");
+        }else if( ToSuffix.back() == '3' ) {
+            Ret.append("rd");
+        }else{
+            Ret.append("th");
+        }
+    }
+    return Ret;
 }
 
 #endif // Common_h

@@ -9,6 +9,7 @@ set(PracticeApps_Headers
 
 	"Src/FoundFactors.h"
 	"Src/AddUp.h"
+	"Src/Fibonacci.h"
 )
 
 add_executable(PracticeApps ${PracticeApps_Sources} ${PracticeApps_Headers})
