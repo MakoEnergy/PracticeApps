@@ -25,7 +25,7 @@ int FoundFactors()
 
     Print("Please provide a number.");
     std::getline(std::cin,Input);
-    if( !VerifyIsDigit(Input) ) {
+    if( !VerifyIsIntDigit(Input) ) {
         Print("Input provided was not a digit!");
         return EXIT_FAILURE;
     }

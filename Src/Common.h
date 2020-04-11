@@ -18,7 +18,16 @@ int ConvertToInt(const std::string& ToConvert)
     return Ret;
 }
 
-bool VerifyIsDigit(const std::string& ToVerify)
+float ConvertToFloat(const std::string& ToConvert)
+{
+    float Ret = 0;
+    std::stringstream Converter;
+    Converter << ToConvert;
+    Converter >> Ret;
+    return Ret;
+}
+
+bool VerifyIsIntDigit(const std::string& ToVerify)
 {
     if( ToVerify.empty() ) {
         return false;
@@ -26,6 +35,21 @@ bool VerifyIsDigit(const std::string& ToVerify)
     for( const char Elem : ToVerify )
     {
         if( !isdigit(Elem) ) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool VerifyIsFloatDigit(const std::string& ToVerify)
+{
+    if( ToVerify.empty() ) {
+        return false;
+    }
+    bool DecimalDetected = 0;
+    for( const char Elem : ToVerify )
+    {
+        if( ( Elem == '.' && !DecimalDetected ) || !isdigit(Elem) ) {
             return false;
         }
     }
