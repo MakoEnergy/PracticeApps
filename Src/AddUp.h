@@ -8,21 +8,20 @@ int AddUp()
     int SourceNum = 0;
     std::string Input;
 
-    Print("Please provide a number.");
+    PrintLine("Please provide a number.");
     std::getline(std::cin,Input);
     if( !VerifyIsIntDigit(Input) ) {
-        Print("Input provided was not a digit!");
+        PrintLine("Input provided was not a digit!");
         return EXIT_FAILURE;
     }
 
-    SourceNum = ConvertToInt(Input);
+    SourceNum = ConvertTo<int>(Input);
     int Total = 0;
     for( int X = 1 ; X <= SourceNum ; ++X )
     {
         Total += X;
     }
-    std::cout << "The total value of every value from 1 to your number is: ";
-    std::cout << Total << "!\n";
+    PrintLine("The total value of every value from 1 to your number is: ",Total,"!");
     return EXIT_SUCCESS;
 }
 

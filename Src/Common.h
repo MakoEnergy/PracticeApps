@@ -4,23 +4,23 @@
 #include <iostream>
 #include <sstream>
 
-void Print(const std::string& Message)
+template<typename... PrintTypes>
+void Print(PrintTypes&&... Messages)
 {
-    std::cout << Message << "\n";
+    ( ( std::cout << Messages ), ... );
 }
 
-int ConvertToInt(const std::string& ToConvert)
+template<typename... PrintTypes>
+void PrintLine(PrintTypes&&... Messages)
 {
-    int Ret = 0;
-    std::stringstream Converter;
-    Converter << ToConvert;
-    Converter >> Ret;
-    return Ret;
+    ( ( std::cout << Messages ), ... );
+    std::cout << "\n";
 }
 
-float ConvertToFloat(const std::string& ToConvert)
+template<typename ReturnType>
+ReturnType ConvertTo(const std::string& ToConvert)
 {
-    float Ret = 0;
+    ReturnType Ret = 0;
     std::stringstream Converter;
     Converter << ToConvert;
     Converter >> Ret;

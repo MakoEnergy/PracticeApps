@@ -23,24 +23,24 @@ int FoundFactors()
     int SourceNum = 0;
     std::string Input;
 
-    Print("Please provide a number.");
+    PrintLine("Please provide a number.");
     std::getline(std::cin,Input);
     if( !VerifyIsIntDigit(Input) ) {
-        Print("Input provided was not a digit!");
+        PrintLine("Input provided was not a digit!");
         return EXIT_FAILURE;
     }
 
-    SourceNum = ConvertToInt(Input);
+    SourceNum = ConvertTo<int>(Input);
     std::vector<int> FoundFactors = FoundFactors_Find(SourceNum);
 
-    Print("The found factors for your provided number are: ");
+    PrintLine("The found factors for your provided number are: ");
     using IntIter = std::vector<int>::iterator;
     for( IntIter CurrIt = FoundFactors.begin() ; CurrIt != FoundFactors.end() ; ++CurrIt )
     {
         if( CurrIt != std::prev( FoundFactors.end() ) ) {
-            std::cout << *CurrIt << ", ";
+            Print(*CurrIt,", ");
         }else{
-            std::cout << "and " << *CurrIt << ".\n";
+            PrintLine("and ",*CurrIt,".");
         }
     }
 

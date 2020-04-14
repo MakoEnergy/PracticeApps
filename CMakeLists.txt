@@ -1,6 +1,8 @@
 project(PracticeApps)
 cmake_minimum_required(VERSION 2.8)
 
+set(CMAKE_CXX_FLAGS "-std=c++17")
+
 set(PracticeApps_Sources
 	"Src/main.cpp"
 )
@@ -11,6 +13,7 @@ set(PracticeApps_Headers
 	"Src/AddUp.h"
 	"Src/Fibonacci.h"
 	"Src/DoubleLetters.h"
+	"Src/WordCount.h"
 )
 
 add_executable(PracticeApps ${PracticeApps_Sources} ${PracticeApps_Headers})
