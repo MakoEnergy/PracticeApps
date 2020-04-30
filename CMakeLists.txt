@@ -14,6 +14,8 @@ set(PracticeApps_Headers
 	"Src/Fibonacci.h"
 	"Src/DoubleLetters.h"
 	"Src/WordCount.h"
+	"Src/HighestAndLowest.h"
+	"Src/VectorSplit.h"
 )
 
 add_executable(PracticeApps ${PracticeApps_Sources} ${PracticeApps_Headers})
