@@ -5,6 +5,7 @@
 #include "WordCount.h"
 #include "HighestAndLowest.h"
 #include "VectorSplit.h"
+#include "TemperatureCoverter.h"
 
 int main(int argc, char** argv)
 {
@@ -14,7 +15,8 @@ int main(int argc, char** argv)
     //int Ret = DoubleLetters();//4
     //int Ret = WordCount();//5
     //int Ret = HighestAndLowest();//6
-    int Ret = VectorSplit();//7
+    //int Ret = VectorSplit();//7
+    int Ret = TemperatureCoverter();//8
     return Ret;
 }
 

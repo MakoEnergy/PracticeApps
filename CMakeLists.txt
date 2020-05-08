@@ -16,6 +16,7 @@ set(PracticeApps_Headers
 	"Src/WordCount.h"
 	"Src/HighestAndLowest.h"
 	"Src/VectorSplit.h"
+	"Src/TemperatureCoverter.h"
 )
 
 add_executable(PracticeApps ${PracticeApps_Sources} ${PracticeApps_Headers})
