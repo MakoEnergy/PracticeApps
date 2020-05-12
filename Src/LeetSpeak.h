@@ -11,8 +11,8 @@ int LeetSpeak()
     PrintLine("Please provide a String to convert to LeetSpeak.");
     std::getline(std::cin,InputString);
 
-    std::map<char,char> Translator = { {'a','4'}, {'e','3'}, {'g','6'}, {'l','1'}, {'o','0'}, {'s','5'}, {'t','7'},
-                                       {'A','4'}, {'E','3'}, {'G','6'}, {'L','1'}, {'O','0'}, {'S','5'}, {'T','7'} };
+    std::map<char,char> Translator = { {'a','4'}, {'e','3'}, {'g','6'}, {'i','1'}, {'o','0'}, {'s','5'}, {'t','7'},
+                                       {'A','4'}, {'E','3'}, {'G','6'}, {'I','1'}, {'O','0'}, {'S','5'}, {'T','7'} };
 
     PrintLine("Here is your converted String: ");
     for( const char CurrChar : InputString )
