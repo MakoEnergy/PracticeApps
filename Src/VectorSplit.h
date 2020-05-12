@@ -29,7 +29,7 @@ int VectorSplit()
         }
     }
 
-    std::cout << "\n";
+    std::cout << '\n';
     PrintLine("Here are your two new vectors: ");
     for( int Index = 0 ; Index < SourceVector.size() ; ++Index )
     {

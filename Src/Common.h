@@ -14,7 +14,7 @@ template<typename... PrintTypes>
 void PrintLine(PrintTypes&&... Messages)
 {
     ( ( std::cout << Messages ), ... );
-    std::cout << "\n";
+    std::cout << '\n';
 }
 
 template<typename ReturnType>

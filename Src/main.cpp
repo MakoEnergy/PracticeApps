@@ -6,6 +6,7 @@
 #include "HighestAndLowest.h"
 #include "VectorSplit.h"
 #include "TemperatureCoverter.h"
+#include "LeetSpeak.h"
 
 int main(int argc, char** argv)
 {
@@ -16,7 +17,8 @@ int main(int argc, char** argv)
     //int Ret = WordCount();//5
     //int Ret = HighestAndLowest();//6
     //int Ret = VectorSplit();//7
-    int Ret = TemperatureCoverter();//8
+    //int Ret = TemperatureCoverter();//8
+    int Ret = LeetSpeak();//9
     return Ret;
 }
 
