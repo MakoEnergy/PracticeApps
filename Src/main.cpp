@@ -7,6 +7,7 @@
 #include "VectorSplit.h"
 #include "TemperatureCoverter.h"
 #include "LeetSpeak.h"
+#include "GenerateRandom.h"
 
 int main(int argc, char** argv)
 {
@@ -18,7 +19,8 @@ int main(int argc, char** argv)
     //int Ret = HighestAndLowest();//6
     //int Ret = VectorSplit();//7
     //int Ret = TemperatureCoverter();//8
-    int Ret = LeetSpeak();//9
+    //int Ret = LeetSpeak();//9
+    int Ret = GenerateRandom();//10
     return Ret;
 }
 

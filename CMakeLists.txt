@@ -18,6 +18,7 @@ set(PracticeApps_Headers
 	"Src/VectorSplit.h"
 	"Src/TemperatureCoverter.h"
 	"Src/LeetSpeak.h"
+	"Src/GenerateRandom.h"
 )
 
 add_executable(PracticeApps ${PracticeApps_Sources} ${PracticeApps_Headers})
